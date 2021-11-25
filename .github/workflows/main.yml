@@ -13,19 +13,20 @@ jobs:
         server_port: 465
         username: ${{secrets.MAIL_USERNAME}}
         password: ${{secrets.MAIL_PASSWORD}}
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
         subject: RELEASE PARA HOMOLOGAÇÂO ${{ github.ref }}
         to: rebeca.cruz@before.com.br,becatriz7@gmail.com
         from: becatriz7@gmail.com
         secure: true
         body: |
             Release para HOMOLOGAÇÂO!
-            https://github.com/becatriz/monorepo/releases/tag/1.10
         cc: becatrizlopes@gmail.com
         reply_to: becatriz7@gmail.com
         in_reply_to: becatriz7@gmail.com
         ignore_cert: true
         convert_markdown: true
         attachments: attachments.zip,git.diff,./dist/static/*.js
-        priority: low
+        priority: high
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        body_path: CHANGELOG.md
+     
