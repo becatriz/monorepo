@@ -19,7 +19,9 @@ jobs:
         secure: true
         body: |
             Release ${{ github.event.release.name }} liberada em HOMOLOGAÇÂO!
+            |
             Cards em HMG
+            |
             ${{ github.event.release.body }}
         cc: becatrizlopes@gmail.com
         reply_to: becatriz7@gmail.com
@@ -30,5 +32,5 @@ jobs:
         priority: high
         tag_name: ${{ github.ref }}
         release_name: Release ${{ github.ref }}
-        files: CHANGELOG.md
+
      
