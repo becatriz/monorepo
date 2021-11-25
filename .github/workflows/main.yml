@@ -20,6 +20,8 @@ jobs:
         body: |
             Release para HOMOLOGAÇÂO!
             https://github.com/becatriz/monorepo/releases/tag/${{ github.ref }}
+            ${{ github.event.release.name }}
+            ${{ github.event.release.body }}
         cc: becatrizlopes@gmail.com
         reply_to: becatriz7@gmail.com
         in_reply_to: becatriz7@gmail.com
