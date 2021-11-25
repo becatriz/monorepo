@@ -17,8 +17,9 @@ jobs:
         to: rebeca.cruz@before.com.br,becatriz7@gmail.com
         from: becatriz7@gmail.com
         secure: true
-        body: Release feita !
-        html_body: file://CHANGELOG.MD
+        body: |
+            Release para HOMOLOGAÇÂO!
+            https://github.com/becatriz/monorepo/releases/tag/1.10
         cc: becatrizlopes@gmail.com
         reply_to: becatriz7@gmail.com
         in_reply_to: becatriz7@gmail.com
