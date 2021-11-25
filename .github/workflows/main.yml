@@ -1,4 +1,4 @@
-sname: E-Mail Release Notification
+name: E-Mail Release Notification
 on:
   release:
     types: [published]
