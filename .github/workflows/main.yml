@@ -13,7 +13,9 @@ jobs:
         server_port: 465
         username: ${{secrets.MAIL_USERNAME}}
         password: ${{secrets.MAIL_PASSWORD}}
-        subject: Github Actions job result
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        subject: RELEASE PARA HOMOLOGAÇÂO ${{ github.ref }}
         to: rebeca.cruz@before.com.br,becatriz7@gmail.com
         from: becatriz7@gmail.com
         secure: true
