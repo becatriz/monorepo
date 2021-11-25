@@ -19,7 +19,7 @@ jobs:
         secure: true
         body: |
             Release para HOMOLOGAÇÂO!
-            https://github.com/becatriz/monorepo/releases/tag/${{ github.ref }}.replace("refs/tags/","")
+            https://github.com/becatriz/monorepo/releases/tag/${{ github.ref }}
         cc: becatrizlopes@gmail.com
         reply_to: becatriz7@gmail.com
         in_reply_to: becatriz7@gmail.com
@@ -29,4 +29,5 @@ jobs:
         priority: high
         tag_name: ${{ github.ref }}
         release_name: Release ${{ github.ref }}
+        files: CHANGELOG.md
      
