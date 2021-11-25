@@ -13,14 +13,13 @@ jobs:
         server_port: 465
         username: ${{secrets.MAIL_USERNAME}}
         password: ${{secrets.MAIL_PASSWORD}}
-        subject: RELEASE PARA HOMOLOGAÇÂO ${{ github.ref }}
+        subject: RELEASE PARA HOMOLOGAÇÂO ${{ github.event.release.name }}
         to: rebeca.cruz@before.com.br,becatriz7@gmail.com
         from: becatriz7@gmail.com
         secure: true
         body: |
-            Release para HOMOLOGAÇÂO!
-            https://github.com/becatriz/monorepo/releases/tag/${{ github.ref }}
-            ${{ github.event.release.name }}
+            Release ${{ github.event.release.name }} liberada em HOMOLOGAÇÂO!
+            Cards em HMG
             ${{ github.event.release.body }}
         cc: becatrizlopes@gmail.com
         reply_to: becatriz7@gmail.com
