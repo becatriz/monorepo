@@ -11,6 +11,8 @@ jobs:
       with:
         server_address: smtp.gmail.com
         server_port: 465
+        username: ${{secrets.MAIL_USERNAME}}
+        password: ${{secrets.MAIL_PASSWORD}}
         subject: Github Actions job result
         to: rebeca.cruz@before.com.br
         from: becatriz7@gmail.com
